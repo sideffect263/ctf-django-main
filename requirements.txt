@@ -43,8 +43,6 @@ pillow==10.2.0
 ply==3.11
 proglog==0.1.10
 protobuf==3.20.3
-pyasn1==0.5.1
-pyasn1-modules==0.2.8
 pycryptodome==3.20.0
 pycurl==7.45.2
 pydantic==2.6.4
