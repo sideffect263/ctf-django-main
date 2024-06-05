@@ -57,7 +57,6 @@ pyreadline3==3.4.1
 python-ipware==2.0.1
 python-lsp-jsonrpc==1.0.0
 pytz==2023.4
-pywin32==305.1
 rsa==4.9
 scipy==1.11.4
 sqlparse==0.4.4
