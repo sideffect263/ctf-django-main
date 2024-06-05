@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+    body{
+        background-color: #6df0c2;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    
+      }
+      #container{
+        flex: 1;
+        background: #6400e4;
+        height: 100%;
+        border-radius: 20px;
+        align-self: center;
+      }
+
+      .move-down-right{
+        position: absolute;
+        bottom: 80px;
+        right: 49%;
+        color: black;
+        font-size: 1em;
+      }
+
+      h1{
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        padding-top: 20px;
+      }
+
+      p{
+        color: white;
+        text-align: center;
+        font-size: 1.5em;
+        padding-top: 20px;
+      }
+
+      #float-circle{
+        width: 80px;
+        height: 80px;
+        background-color: #141c3a;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 2s ease-in-out;
+        z-index: 1;
+      }
+       #platform{
+        width: 10%;
+        height: 20px;
+        background-color: #ff725e;
+        position: absolute;
+        bottom: 15px;
+        left: 45%;
+      }
+
+      #floor{
+        width: 15%;
+        height: 20px;
+        background-color: beige;
+        position: absolute;
+        bottom: 0;
+        left: 42%;
+      }
+      
+
+      
+    
+  </style>
+  <link rel="stylesheet" type="text/css" href="{% static 'style/style_level3.css' %}">
+
+</head>
+
+
+<body>
+  <div id='container'>
+    <h1>Ball Bounce</h1>
+    <p>Can you think of any way you can move this ball?.</p>
+   
+
+    <div id='float-circle'>
+
+    </div> 
+    <div><a href = "{% url 'level31' %}" class ="move-down-right">log in</a></div>
+
+    <div id='platform'></div>
+    <div id='floor'></div>
+
+   
+</div>
+
+
+  <script>
+
+let ball = document.getElementById('float-circle');
+
+// Write your code below
+function up(){
+  ball.style.bottom = '500px';
+}
+
+function down(){
+  ball.style.bottom = '50px';
+}
+
+document.addEventListener('keydown', up);
+document.addEventListener('keyup', down);
+  </script>
+
+
+</body>
+</html>
